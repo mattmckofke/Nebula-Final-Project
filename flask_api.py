@@ -7,6 +7,10 @@ app = Flask(__name__)
 # Ensure that Matplotlib uses a non-interactive backend to generate plots
 plt.switch_backend('Agg')
 
+@app.route('/')
+def homepage():
+    return "Welcome to my cool project"
+
 @app.route('/temperature_trends')
 def temperature_trends():
     # Generate the plot
